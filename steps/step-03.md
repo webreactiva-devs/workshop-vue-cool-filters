@@ -85,7 +85,7 @@ Tendrás que utilizar la directiva `v-for`
 
 ## 2. Pistas para encontrar la solución
 
-En la primera parte del paso hablamos de la directiva v-show.
+En la primera parte del paso hablamos de la directiva [v-show](https://vuejs.org/api/built-in-directives.html#v-show).
 
 Para la segunda te hará falta consultar esta documentación:
 
