@@ -12,6 +12,11 @@ Será en Zoom, la sala la compartiré por el grupo de telegram.
 
 **Nota**: Te recomiendo que instales el cliente de Zoom, funciona mucho mejor que la versión web.
 
+# Cómo utilizar este repositorio
+
+Puedes descargarlo o verlo en la web.
+
+En la carpeta `steps` encontrarás cada paso. Para ir avanzando necesitarás cambiar de rama a `step-01`, `step-02`...
 
 # Qué necesitas tener instalado para el taller
 
@@ -35,11 +40,15 @@ Sigue los pasos que aparecen en ese repositorio y si todo va bien, ya estás lis
 ## Opcionales pero interesantes
 
 **Volar**
+
 https://marketplace.visualstudio.com/items?itemName=Vue.volar
+
 Extensión para Visual Studio Code (solo por el logo merece la pena...)
 
 **Vue Devtools**
+
 https://devtools.vuejs.org/
+
 Extensión para Chrome y Firefox. 
 
 
