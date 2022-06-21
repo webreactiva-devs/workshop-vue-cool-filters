@@ -1,6 +1,6 @@
 # Paso 1: Arranca motores
 
-## Problema
+## Reto
 
 Hay que crear la app de Vue con Vite
 
@@ -24,6 +24,10 @@ http://localhost:3000/
 
 Ejem, te lo he dado hecho por ser el primero :P
 
-## Ver solución
+
+## Resolución
+
+Puedes verla en la rama `step-01` del repositorio de trabajo.
+
 
 Vamos a por el siguiente paso >> Cambia a la rama `step-02`
