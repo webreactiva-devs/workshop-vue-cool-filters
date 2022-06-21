@@ -8,6 +8,7 @@ Eres persona moderna y vamos a usar Vue para ello.
 
 Aprovechamos a hacer un pequeño refactor y meter una nueva variable:
 
+```js
 <template>
  <img v-if="showImg" :src="imgSrc" />
  <div v-else>No te muestro la imagen y punto</div>
@@ -23,6 +24,7 @@ export default {
   }
 } 
 </script>
+```
 
 Ese `v-if` que ves ahí es una directiva. Es algo que entiende Vue en el “HTML con esteroides” y lo que hace es añadir un condicional que evalúa una expresión, en este caso una variable a `true`. El `v-else` es lo que se mostrará cuando la condición del `v-if` no se cumpla.
 
@@ -36,7 +38,7 @@ Comprueba como funciona la directiva `v-show` con respecto a `v-if`
 
 > En el punto 2 de más abajo encontrarás la documentación de esta directiva
 
-----
+---- 
 
 ### Trabajo con arrays
 
@@ -44,6 +46,7 @@ Algo muy habitual con lo que te enfrentarás en Vue y cualquier otro lenguaje de
 
 En la parte del `script` añade esto:
 
+```js
 <script>
 export default {
   data() {
@@ -60,17 +63,20 @@ export default {
   }
 } 
 </script>
+```
 
 
 ### 💦 Para que lo resuelvas tú
 
 Busca la forma de conseguir que el resultado final sea esto (si, son 4+1, total 5)
 
+```js
 <img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=1">
 <img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=2">
 <img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=3">
 <img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=4">
 <img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=5">
+```
 
 Tendrás que utilizar la directiva `v-for`
 
@@ -83,8 +89,8 @@ En la primera parte del paso hablamos de la directiva v-show.
 
 Para la segunda te hará falta consultar esta documentación:
 
-- [v-for] (explicado en la sección de Essentials)
-- [v-for] (explicado en la sección de Built-in Directives)
+- [v-for](https://vuejs.org/guide/essentials/list.html#v-for) (explicado en la sección de Essentials)
+- [v-for](https://vuejs.org/api/built-in-directives.html#v-for) (explicado en la sección de Built-in Directives)
 
 
 ## 3. Resolución
@@ -92,4 +98,4 @@ Para la segunda te hará falta consultar esta documentación:
 Puedes verla en la rama `step-03` del repositorio de trabajo.
 
 
-Vamos a por el siguiente paso >> Cambia a la rama `step-04`
+Vamos a por el siguiente paso \>\> Cambia a la rama `step-04`
