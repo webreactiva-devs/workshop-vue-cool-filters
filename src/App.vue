@@ -1,7 +1,9 @@
 <template>
+  <button @click="toggleShowImg">Interruptor</button>
+  <button @click="changeImage">Cambiar imagen</button>
+  <hr />
   <img v-if="showImg" :src="imgSrc" />
   <div v-else>No te muestro la imagen y punto</div>
-  <img v-for="image in images" :key="image" :src="image" />
 </template>
 
 <script>
@@ -18,5 +20,14 @@ export default {
       ],
     };
   },
+  methods: {
+    toggleShowImg() {
+      return this.showImg = !this.showImg
+    },
+    changeImage() {
+      //return this.imgSrc = this.images[Math.floor(Math.random() * this.images.length)];
+      return this.imgSrc = `https://source.unsplash.com/200x200/?cocktail,party&v=${Math.floor(Math.random() * 300)}`;
+    }
+  }
 };
 </script>
