@@ -52,7 +52,7 @@ export default {
   data() {
     return {
       showImg: true,
-      imgSrc: 'https://source.unsplash.com/200x200/?cocktail,party&v=1'
+      imgSrc: 'https://source.unsplash.com/200x200/?cocktail,party&v=1',
       images: [
         "https://source.unsplash.com/200x200/?cocktail,party&v=2",
         "https://source.unsplash.com/200x200/?cocktail,party&v=3",
