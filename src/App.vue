@@ -1,21 +1,39 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <button @click="changeImage">Cambiar imagen</button>
+  <input type="color" v-model="borderColor" />
+  <hr />
+  <img :src="imgSrc" :style="imgStyle" />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<script>
+export default {
+  data() {
+    return {
+      borderColor: "#FF0000",
+      imgSrc: "https://source.unsplash.com/200x200/?cocktail,party&v=1",
+    };
+  },
+  methods: {
+    changeImage() {
+      return (this.imgSrc = `https://source.unsplash.com/200x200/?cocktail,party&v=${Math.floor(
+        Math.random() * 300
+      )}`);
+    }
+  },
+  computed: {
+    imgStyle() {
+      return {
+        "border-width": "20px",
+        borderStyle: "solid", 
+        borderColor: this.borderColor
+      }
+    },
+  },
+  mounted() {
+    const color = (new URLSearchParams(window.location.search)).get('color')
+    if(color != undefined ) {
+      this.borderColor = `#${color}`
+    }
+  }
+};
+</script>
