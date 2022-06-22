@@ -5,35 +5,31 @@
   <img :src="imgSrc" :style="imgStyle" />
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      borderColor: "#FF0000",
-      imgSrc: "https://source.unsplash.com/200x200/?cocktail,party&v=1",
-    };
-  },
-  methods: {
-    changeImage() {
-      return (this.imgSrc = `https://source.unsplash.com/200x200/?cocktail,party&v=${Math.floor(
-        Math.random() * 300
-      )}`);
-    }
-  },
-  computed: {
-    imgStyle() {
-      return {
-        "border-width": "20px",
-        borderStyle: "solid", 
-        borderColor: this.borderColor
-      }
-    },
-  },
-  mounted() {
-    const color = (new URLSearchParams(window.location.search)).get('color')
-    if(color != undefined ) {
-      this.borderColor = `#${color}`
-    }
-  }
+<script setup>
+import { ref, computed, onMounted } from "vue";
+
+const borderColor = ref("#FF0000");
+const imgSrc = ref("https://source.unsplash.com/200x200/?cocktail,party&v=1");
+
+const changeImage = () => {
+  imgSrc.value = `https://source.unsplash.com/200x200/?cocktail,party&v=${Math.floor(
+    Math.random() * 300
+  )}`;
 };
+
+const imgStyle = computed(() => {
+  return {
+    "border-width": "20px",
+    borderStyle: "solid",
+    borderColor: borderColor.value,
+  };
+});
+
+onMounted(() => {
+  const color = new URLSearchParams(window.location.search).get("color");
+  if (color != undefined) {
+    borderColor.value = `#${color}`;
+  }
+})
+
 </script>
