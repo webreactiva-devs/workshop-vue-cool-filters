@@ -28,6 +28,12 @@ export default {
         borderColor: this.borderColor
       }
     },
+  },
+  mounted() {
+    const color = (new URLSearchParams(window.location.search)).get('color')
+    if(color != undefined ) {
+      this.borderColor = `#${color}`
+    }
   }
 };
 </script>
