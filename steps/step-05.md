@@ -15,13 +15,13 @@ Vamos a ponerle color a la vida y a quitar algunos elementos que ya no nos hacen
 export default {
   data() {
     return {
-	    borderColor: "#FF0000",
+      borderColor: "#FF0000",
       imgSrc: "https://source.unsplash.com/200x200/?cocktail,party&v=1",
     };
   },
   methods: {
     changeImage() {
-      return this.imgSrc = `https://source.unsplash.com/200x200/?cocktail,party&v=${Math.floor(Math.random() * 300)}`;
+      this.imgSrc = `https://source.unsplash.com/200x200/?cocktail,party&v=${Math.floor(Math.random() * 300)}`;
     }
   }
 };
@@ -37,7 +37,6 @@ Un recurso muy utilizado en el mundo de JavaScript son las “cadenas de texto d
 Así que reformulamos el atributo `style` de la imagen.
 
 ```js
-
   <img :src="imgSrc" :style="`border: 20px solid ${borderColor}`" />
 ```
 
