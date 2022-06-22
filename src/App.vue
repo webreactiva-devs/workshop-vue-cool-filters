@@ -22,7 +22,11 @@ export default {
   },
   computed: {
     imgStyle() {
-      return `border-width: 20px; border-style: solid; border-color: ${this.borderColor};`
+      return {
+        "border-width": "20px",
+        borderStyle: "solid", 
+        borderColor: this.borderColor
+      }
     }
   }
 };
