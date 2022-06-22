@@ -2,7 +2,7 @@
   <button @click="changeImage">Cambiar imagen</button>
   <input type="color" v-model="borderColor" />
   <hr />
-  <img :src="imgSrc" :style="`border: 20px solid ${borderColor}`" />
+  <img :src="imgSrc" :style="imgStyle" />
 </template>
 
 <script>
@@ -20,5 +20,10 @@ export default {
       )}`);
     }
   },
+  computed: {
+    imgStyle() {
+      return `border: 20px solid ${this.borderColor}`
+    }
+  }
 };
 </script>
