@@ -75,5 +75,9 @@ Sí, pero empezaremos con Options API.
 
 No :)
 
+### ¿Dónde está la presentación del primer día del taller?
+
+[Aquí](https://docs.google.com/presentation/d/e/2PACX-1vRvSnsd3ELK8RyuRqDgoXLR6mh-2ePAfHST-CGlEcZBmvdIyqHO5wMXzh9iV5Y0fJliLcevooIjr-xo/pub?start=true&loop=false&delayms=60000)
+
 
 ¡Vuen día!
