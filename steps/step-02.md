@@ -79,7 +79,7 @@ Fíjate como aquí pasan dos cosas:
 
 ### 💦 Para que lo resuelvas tú
 
-1.Intenta hacer lo mismo para el atributo `scr` de la URL de la imagen. Crea una variable en `data()` que se llame `imgSrc` e intenta que se interpole el valor en la plantilla.
+1.Intenta hacer lo mismo para el atributo `src` de la URL de la imagen. Crea una variable en `data()` que se llame `imgSrc` e intenta que se interpole el valor en la plantilla.
 
 ## 2. Pistas para encontrar la solución
 
