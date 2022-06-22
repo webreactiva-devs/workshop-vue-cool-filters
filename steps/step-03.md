@@ -71,11 +71,11 @@ export default {
 Busca la forma de conseguir que el resultado final sea esto (si, son 4+1, total 5)
 
 ```js
-<img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=1">
-<img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=2">
-<img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=3">
-<img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=4">
-<img src="https://source.unsplash.com/200x200/?cocktail,party&amp;v=5">
+<img src="https://source.unsplash.com/200x200/?cocktail,party&v=1">
+<img src="https://source.unsplash.com/200x200/?cocktail,party&v=2">
+<img src="https://source.unsplash.com/200x200/?cocktail,party&v=3">
+<img src="https://source.unsplash.com/200x200/?cocktail,party&v=4">
+<img src="https://source.unsplash.com/200x200/?cocktail,party&v=5">
 ```
 
 Tendrás que utilizar la directiva `v-for`
