@@ -28,9 +28,6 @@ export default {
         borderColor: this.borderColor
       }
     },
-    imgSrcComputed() {
-      return 
-    }
   }
 };
 </script>
