@@ -36,7 +36,7 @@ Estamos haciendo esto para el estilo de la imagen:
 
 Porque ahora mismo solo queremos cambiar el color del borde, pero, ¿y si queremos cambiar otros atributos del estilo?
 
-Nos vamos a `script` y añades este bloque nuevo justo antes de la última `{` (al mismo nivel que `methods`, no te olvides de la coma)
+Nos vamos a `script` y añades este bloque nuevo justo antes de la última `}` (al mismo nivel que `methods`, no te olvides de la coma)
 
 ```js
   computed: {
