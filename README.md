@@ -18,6 +18,10 @@ Puedes descargarlo o verlo en la web.
 
 En la carpeta `steps` encontrarás cada paso. Para ir avanzando necesitarás cambiar de rama a `step-01`, `step-02`...
 
+**👉 ¡Empieza por el step-01!**
+
+![](docs/navigate-branches.png)
+
 # Qué necesitas tener instalado para el taller
 
 ## Visual Studio Code o cualquier otro editor de código
