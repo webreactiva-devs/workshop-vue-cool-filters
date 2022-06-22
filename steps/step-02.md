@@ -1,4 +1,4 @@
- Paso 2: Las tres partes
+# Paso 2: Las tres partes
 
 ## 1. Reto
 
