@@ -20,7 +20,7 @@ Aplica todo lo que has visto en los pasos anteriores y utiliza la Composition AP
 
 ## 2. Pistas para encontrar la solución
 
-- [FAQ de la Composition API]
+- [FAQ de la Composition API](https://vuejs.org/guide/extras/composition-api-faq.html)
 
 
 ## 3. Resolución
