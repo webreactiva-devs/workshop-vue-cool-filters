@@ -1,20 +1,33 @@
 <template>
-  <div>Valor: {{saturateInputValue}}</div>
-  <label for="saturateInputValue">{{label}}</label>
-  <input type="range" :min="min" :max="max" :step="step" v-model="saturateInputValue" />
+  <div>Valor: {{ modelValue }}</div>
+  <label for="saturateInputValue"><slot /></label>
+  <input
+    type="range"
+    :value="modelValue"
+    @input="$emit('update:modelValue', $event.target.value)"
+    :min="min"
+    :max="max"
+    :step="step"
+  />
+  <div class="info">
+    <slot name="info"></slot>
+  </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 
 const props = defineProps({
+  modelValue: {
+    default: 0,
+  },
   label: {
     type: String,
-    default: ''
+    default: "",
   },
   min: {
     type: Number,
-    default: 0
+    default: 0,
   },
   max: {
     type: Number,
@@ -22,9 +35,9 @@ const props = defineProps({
   },
   step: {
     type: Number,
-    default: 1
-  }
-})
+    default: 1,
+  },
+});
 
-const saturateInputValue = ref(0);
+const emits = defineEmits(["update:modelValue"]);
 </script>
