@@ -26,10 +26,7 @@ const imgStyle = computed(() => {
 });
 
 onMounted(() => {
-  const color = new URLSearchParams(window.location.search).get("color");
-  if (color != undefined) {
-    borderColor.value = `#${color}`;
-  }
+  document.querySelector('img').style.borderColor = 'blue'
 })
 
 </script>

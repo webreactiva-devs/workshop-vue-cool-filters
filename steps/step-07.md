@@ -42,22 +42,17 @@ Te doy incluso parte del código:
 
 ```js
   mounted() {
-    const color = (new URLSearchParams(window.location.search)).get('color')
-	// Aquí va tu código
+    document.getElementByTag('¡mg').style.borderColor = 'green'
   },
 ```
 
-Añade un `?color=0000FF` (sin almohadilla) a la URL del navegador e intenta que ese sea el color por defecto del borde de la imagen.
+Quizás no tenga mucho sentido hacer esto de manera real, porque tienes otras alternativas para cambiar el estilo pero lo más importante de esto es:
 
-_(No te preocupes ahora por validarlo)_
-
-> Para nota: ¿Pasaría lo mismo con el hook `created()`?
+Cambia `mounted()` por el hook `created()`. ¿Qué ha pasado?
 
 ## 2. Pistas para encontrar la solución
 
 - [Component Lifecycle](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)
-- [URLSearchParams](https://developer.mozilla.org/es/docs/Web/API/URLSearchParams)
-
 
 ## 3. Resolución
 
