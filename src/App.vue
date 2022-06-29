@@ -19,7 +19,7 @@
     :max="100"
     :step="1"
     label="Saturación"
-  ></SaturateInputFilter>
+  >Saturación<template #info><small>Desliza el punto sobre la guía para cambiar la saturación de la imagen</small></template></SaturateInputFilter>
 </template>
 
 <script setup>

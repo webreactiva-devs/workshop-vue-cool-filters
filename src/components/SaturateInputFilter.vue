@@ -1,6 +1,6 @@
 <template>
-  <div>Valor: {{modelValue}}</div>
-  <label for="saturateInputValue">{{ label }}</label>
+  <div>Valor: {{ modelValue }}</div>
+  <label for="saturateInputValue"><slot /></label>
   <input
     type="range"
     :value="modelValue"
@@ -9,6 +9,9 @@
     :max="max"
     :step="step"
   />
+  <div class="info">
+    <slot name="info"></slot>
+  </div>
 </template>
 
 <script setup>
@@ -16,7 +19,7 @@ import { ref } from "vue";
 
 const props = defineProps({
   modelValue: {
-    default: 0
+    default: 0,
   },
   label: {
     type: String,
