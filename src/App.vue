@@ -19,7 +19,13 @@
     :max="100"
     :step="1"
     label="Saturación"
-  >Saturación<template #info><small>Desliza el punto sobre la guía para cambiar la saturación de la imagen</small></template></SaturateInputFilter>
+    >Saturación<template #info
+      ><small
+        >Desliza el punto sobre la guía para cambiar la saturación de la
+        imagen</small
+      ></template
+    ></SaturateInputFilter
+  >
 </template>
 
 <script setup>
@@ -41,7 +47,7 @@ const changeImage = () => {
 
 const changeSaturateFilter = (value) => {
   state.saturateFilter = value;
-}
+};
 
 const imgStyle = computed(() => {
   return {
