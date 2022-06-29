@@ -7,10 +7,12 @@
   <label for="grayscaleFilter">Escala de gris</label>
   <input type="range" v-model="state.grayscaleFilter" min="0" max="100" step="1" />
   <hr />
+  <SaturateInputFilter min="0" max="100" step="1" label="Saturación"></SaturateInputFilter>
 </template>
 
 <script setup>
 import { ref, computed, reactive } from "vue";
+import SaturateInputFilter from "./components/SaturateInputFilter.vue"
 
 const state = reactive({
     borderColor: "#FF0000",
