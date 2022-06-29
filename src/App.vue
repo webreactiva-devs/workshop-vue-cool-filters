@@ -14,7 +14,7 @@
   />
   <hr />
   <SaturateInputFilter
-    @updateSaturateFilter="changeSaturateFilter"
+    v-model="state.saturateFilter"
     :min="0"
     :max="100"
     :step="1"
@@ -29,7 +29,7 @@ import SaturateInputFilter from "./components/SaturateInputFilter.vue";
 const state = reactive({
   borderColor: "#FF0000",
   grayscaleFilter: 0,
-  saturateFilter: 0,
+  saturateFilter: 100,
   imgSrc: "https://source.unsplash.com/400x400/?cocktail,party&v=1",
 });
 
