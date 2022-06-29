@@ -1,7 +1,7 @@
 <template>
   <div>Valor: {{saturateInputValue}}</div>
   <label for="saturateInputValue">{{label}}</label>
-  <input type="range" :min="min" :max="max" :step="step" v-model="saturateInputValue" />
+  <input type="range" @input="$emit('updateSaturateFilter', $event.target.value)" :min="min" :max="max" :step="step" v-model="saturateInputValue" />
 </template>
 
 <script setup>
@@ -25,6 +25,8 @@ const props = defineProps({
     default: 1
   }
 })
+
+const emits = defineEmits(['updateSaturateFilter'])
 
 const saturateInputValue = ref(0);
 </script>

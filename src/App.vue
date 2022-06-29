@@ -5,20 +5,33 @@
   <input type="color" v-model="state.borderColor" />
   <hr />
   <label for="grayscaleFilter">Escala de gris</label>
-  <input type="range" v-model="state.grayscaleFilter" min="0" max="100" step="1" />
+  <input
+    type="range"
+    v-model="state.grayscaleFilter"
+    min="0"
+    max="100"
+    step="1"
+  />
   <hr />
-  <SaturateInputFilter :min="0" :max="100" :step="1" label="Saturación"></SaturateInputFilter>
+  <SaturateInputFilter
+    @updateSaturateFilter="changeSaturateFilter"
+    :min="0"
+    :max="100"
+    :step="1"
+    label="Saturación"
+  ></SaturateInputFilter>
 </template>
 
 <script setup>
 import { ref, computed, reactive } from "vue";
-import SaturateInputFilter from "./components/SaturateInputFilter.vue"
+import SaturateInputFilter from "./components/SaturateInputFilter.vue";
 
 const state = reactive({
-    borderColor: "#FF0000",
-    grayscaleFilter: 0,
-    imgSrc: "https://source.unsplash.com/400x400/?cocktail,party&v=1"
-})
+  borderColor: "#FF0000",
+  grayscaleFilter: 0,
+  saturateFilter: 0,
+  imgSrc: "https://source.unsplash.com/400x400/?cocktail,party&v=1",
+});
 
 const changeImage = () => {
   state.imgSrc = `https://source.unsplash.com/400x400/?cocktail,party&v=${Math.floor(
@@ -26,13 +39,16 @@ const changeImage = () => {
   )}`;
 };
 
+const changeSaturateFilter = (value) => {
+  state.saturateFilter = value;
+}
+
 const imgStyle = computed(() => {
   return {
     "border-width": "20px",
     borderStyle: "solid",
     borderColor: state.borderColor,
-    filter: `grayscale(${state.grayscaleFilter}%)`,
+    filter: `grayscale(${state.grayscaleFilter}%) saturate(${state.saturateFilter}%)`,
   };
 });
-
 </script>
