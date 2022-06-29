@@ -16,7 +16,7 @@ Vue quiere dar aquí dos soluciones porque sabe que ambas tienen limitaciones.
 
 Y muy importante:
 
-**Para que Vue pueda hacer su magia necesita controlar las definiciones y las mutaciones sobre las variables, por eso se saca de la manga los ref y reactive. **
+**Para que Vue pueda hacer su magia necesita controlar las definiciones y las mutaciones sobre las variables, por eso se saca de la manga los ref y reactive.**
 
 ---- 
 
