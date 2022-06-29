@@ -30,10 +30,7 @@ export default {
     },
   },
   mounted() {
-    const color = (new URLSearchParams(window.location.search)).get('color')
-    if(color != undefined ) {
-      this.borderColor = `#${color}`
-    }
+    document.querySelector('img').style.borderColor = 'blue'
   }
 };
 </script>
