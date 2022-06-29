@@ -5,16 +5,33 @@
   <img :src="imgSrc" :style="imgStyle" />
 </template>
 
-<script setup>
-import { ref, computed, onMounted } from "vue";
-
-const borderColor = ref("#FF0000");
-const imgSrc = ref("https://source.unsplash.com/200x200/?cocktail,party&v=1");
-
-const changeImage = () => {
-  imgSrc.value = `https://source.unsplash.com/200x200/?cocktail,party&v=${Math.floor(
-    Math.random() * 300
-  )}`;
+<script>
+export default {
+  data() {
+    return {
+      borderColor: "#FF0000",
+      imgSrc: "https://source.unsplash.com/200x200/?cocktail,party&v=1",
+    };
+  },
+  methods: {
+    changeImage() {
+      return (this.imgSrc = `https://source.unsplash.com/200x200/?cocktail,party&v=${Math.floor(
+        Math.random() * 300
+      )}`);
+    }
+  },
+  computed: {
+    imgStyle() {
+      return {
+        "border-width": "20px",
+        borderStyle: "solid", 
+        borderColor: this.borderColor
+      }
+    },
+  },
+  mounted() {
+    document.querySelector('img').style.borderColor = 'blue'
+  }
 };
 
 const imgStyle = computed(() => {
