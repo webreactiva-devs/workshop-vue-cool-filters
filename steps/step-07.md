@@ -42,7 +42,7 @@ Te doy incluso parte del código:
 
 ```js
   mounted() {
-    document.getElementByTag('img').style.borderColor = 'green'
+    document.querySelector('img').style.borderColor = 'green'
   },
 ```
 
