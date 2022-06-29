@@ -69,11 +69,14 @@ A continuación tienes que capturar ese valor en `App.vue` y hacer que el filtro
 Que no se te olvide crear un atributo más en el `state` para que el valor de la saturación sea reactivo ni aplicarlo en los estilos de la imagen con el filter `saturate(value%)`
 
 > Para una nota muy alta: ¿cómo podrías comunicar padre e hijo de tal forma que pudieras dar un valor de inicio a la saturación desde el padre?
+
+> Avanzamos más sobre el tema en la rama `step-12-plus` usando una técnica descrita en la propia documentación de Vue. (Sin cambios en el texto, solo en el código)
  
 ## 2. Pistas para encontrar la solución
 
 - Sobre todo: [Components Events](https://vuejs.org/guide/components/events.html)
 - Para avanzar más sobre el tema: [Events usage with v-model](https://vuejs.org/guide/components/events.html#usage-with-v-model)
+- [Saturate filter](https://developer.mozilla.org/es/docs/Web/CSS/filter#saturate())
 
 
 ## 3. Resolución
