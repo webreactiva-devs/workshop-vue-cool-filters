@@ -7,7 +7,7 @@
   <label for="grayscaleFilter">Escala de gris</label>
   <input type="range" v-model="state.grayscaleFilter" min="0" max="100" step="1" />
   <hr />
-  <SaturateInputFilter min="0" max="100" step="1" label="Saturación"></SaturateInputFilter>
+  <SaturateInputFilter :min="0" :max="100" :step="1" label="Saturación"></SaturateInputFilter>
 </template>
 
 <script setup>
